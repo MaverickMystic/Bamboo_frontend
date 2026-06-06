@@ -14,7 +14,7 @@ import Inquiry from "./pages/Inquiry";
 import Blog from "./pages/Blog";
 import Detail from "./pages/Detail";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
+
 import PostEditor from "./pages/admin/PostEditor";
 import  AdminLayout from "./Layouts/adminLayout";
 import BlogManagement from "./pages/admin/BlogManagement";
@@ -39,10 +39,7 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-      {
-        path: "dashboard",
-        element: <Dashboard />,
-      },
+
       {
         path: "about/speech",
         element: <Speech />,

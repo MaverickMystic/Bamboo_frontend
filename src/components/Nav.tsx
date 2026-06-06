@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { NavLink, useLocation } from "react-router";
 import { TiThMenuOutline } from "react-icons/ti";
 import { IoCloseCircleOutline } from "react-icons/io5";
@@ -6,10 +6,13 @@ import bambooLogo from "../assets/bamboo.png";
 
 const Nav = () => {
   const [cartopen, iscartopen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); 
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
+  // Compact pill padding for tighter nav architecture
   const pill = ({ isActive }: { isActive: boolean }) =>
-    `rounded-full px-5 py-2 text-sm font-medium transition-all duration-200 ${
+    `rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-200 ${
       isActive
         ? "bg-[#D1E7D1] text-greensage"
         : "text-gray-700 hover:bg-[#F2F7F2] hover:text-greensage"
@@ -17,18 +20,34 @@ const Nav = () => {
 
   const aboutActive = location.pathname.startsWith("/about");
 
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <>
       {/* HEADER */}
       <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <div className="mx-auto flex h-25 max-w-7xl items-center justify-between px-6">
+        {/* 
+          1. h-18 reduces the height of the bar.
+          2. max-w-5xl pulls logo and nav links closer toward the center screen axis.
+        */}
+        <div className="mx-auto flex h-18 max-w-5xl items-center justify-between px-6">
+          
           {/* LOGO */}
           <NavLink to="/" className="flex items-center">
-            <img className="w-36 md:w-40" src={bambooLogo} alt="Bamboo Logo" />
+            <img className="w-28 md:w-32 object-contain" src={bambooLogo} alt="Bamboo Logo" />
           </NavLink>
 
-          {/* DESKTOP NAV */}
-          <nav className="hidden items-center gap-2 md:flex">
+          {/* DESKTOP/TABLET NAV */}
+          <nav className="hidden items-center gap-1.5 md:flex">
             <NavLink to="/" end className={pill}>
               Home
             </NavLink>
@@ -47,18 +66,27 @@ const Nav = () => {
 
             {/* ABOUT DROPDOWN */}
             <div
-              className={`relative group rounded-full px-5 py-2 text-sm font-medium transition-colors ${
+              ref={dropdownRef}
+              className={`relative rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer select-none ${
                 aboutActive
                   ? "bg-[#D1E7D1] text-greensage"
                   : "text-gray-700 hover:text-greensage"
               }`}
+              onClick={() => setDropdownOpen(!dropdownOpen)}
             >
-              <span className="cursor-pointer">About</span>
+              <span>About</span>
 
-              <div className="invisible absolute left-1/2 top-full z-50 mt-3 w-56 -translate-x-1/2 rounded-2xl bg-white p-2 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+              <div
+                className={`absolute left-1/2 top-full z-50 mt-2 w-56 -translate-x-1/2 rounded-2xl bg-white p-2 shadow-xl transition-all duration-200 ${
+                  dropdownOpen
+                    ? "visible opacity-100 translate-y-0"
+                    : "invisible opacity-0 -translate-y-1"
+                }`}
+              >
                 <NavLink
                   to="/about/speech"
                   className="block rounded-lg px-4 py-2 text-greensage hover:bg-greensage hover:text-white"
+                  onClick={() => setDropdownOpen(false)}
                 >
                   Speech
                 </NavLink>
@@ -66,6 +94,7 @@ const Nav = () => {
                 <NavLink
                   to="/about/schooloverview"
                   className="block rounded-lg px-4 py-2 text-greensage hover:bg-greensage hover:text-white"
+                  onClick={() => setDropdownOpen(false)}
                 >
                   School Overview
                 </NavLink>
@@ -73,6 +102,7 @@ const Nav = () => {
                 <NavLink
                   to="/about/inquiry"
                   className="block rounded-lg px-4 py-2 text-greensage hover:bg-greensage hover:text-white"
+                  onClick={() => setDropdownOpen(false)}
                 >
                   Inquiry
                 </NavLink>
@@ -86,7 +116,7 @@ const Nav = () => {
 
           {/* MOBILE MENU BUTTON */}
           <button
-            className="text-3xl text-greensage md:hidden"
+            className="text-2xl text-greensage md:hidden p-1 hover:bg-gray-50 rounded-lg transition-colors"
             onClick={() => iscartopen(true)}
           >
             <TiThMenuOutline />
@@ -109,8 +139,10 @@ const Nav = () => {
         }`}
       >
         {/* CLOSE BUTTON */}
-        <div className="flex justify-end p-5 text-3xl text-greensage">
-          <IoCloseCircleOutline onClick={() => iscartopen(false)} />
+        <div className="flex justify-end p-5 text-2xl text-greensage">
+          <button onClick={() => iscartopen(false)} className="p-1 rounded-full hover:bg-gray-50">
+            <IoCloseCircleOutline />
+          </button>
         </div>
 
         {/* LINKS */}

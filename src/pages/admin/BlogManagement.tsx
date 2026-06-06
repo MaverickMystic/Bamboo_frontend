@@ -80,7 +80,7 @@ fetch(`${baseURL}/api/users`)
     setDeleteState({ status: "deleting", postId });
 
     try {
-      await axios.delete(`http://localhost:3000/posts/${postId}`, {
+      await axios.delete(`${baseURL}/posts/${postId}`, {
         withCredentials: true,
       });
 
