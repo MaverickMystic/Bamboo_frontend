@@ -33,7 +33,7 @@ const Home = () => {
      
      
 {/* HERO SECTION CONTAINER */}
-<div className="relative mt-20 flex flex-col items-center">
+<div className="relative mt-30 flex flex-col items-center">
   
   {/* HERO TEXT - Now sits naturally at the top */}
   <div className="relative z-10 flex flex-col items-center text-center px-4">
@@ -58,28 +58,35 @@ const Home = () => {
       </div>
 
       {/* INFO SECTION */}
-      <div className="mt-16">
-        <h1 className="mb-4 text-center text-2xl font-extrabold text-black md:text-3xl">
-          INFO
-        </h1>
+   <div className="mt-16 px-4">
+  <h1 className="mb-4 text-center text-2xl font-extrabold text-black md:text-3xl">
+    INFO
+  </h1>
 
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-10">
-            <Link to="/school">
-              <Card title="Partner Language School" icon={<GiShakingHands />} />
-            </Link>
+  <div className="flex justify-center">
+    {/* 1. Changed grid-cols-1 to grid-cols-2 for mobile screens.
+      2. Set md:grid-cols-3 to revert back to a standard 3-column row layout on laptops/desktops.
+    */}
+    <div className="grid grid-cols-2 gap-4 w-full max-w-sm md:max-w-none md:grid-cols-3 md:gap-10">
+      
+      <Link to="/school">
+        <Card title="Partner Language School" icon={<GiShakingHands />} />
+      </Link>
 
-            <Link to="/about/schooloverview">
-              <Card title="School Overview" icon={<FaSchool />} />
-            </Link>
+      <Link to="/about/schooloverview">
+        <Card title="School Overview" icon={<FaSchool />} />
+      </Link>
 
-            <Link to="/course">
-              <Card title="Our Courses" icon={<BiBookBookmark />} />
-            </Link>
-          </div>
-        </div>
-      </div>
+      {/* 3. Added 'col-span-2 md:col-span-1' so this card spans full width 
+           on mobile but behaves normally as a single unit on desktop layout breaks.
+      */}
+      <Link to="/course" className="col-span-2 md:col-span-1">
+        <Card title="Our Courses" icon={<BiBookBookmark />} />
+      </Link>
 
+    </div>
+  </div>
+</div>
       {/* BANNER */}
       <div className="mt-16 px-4">
         <Banner />
@@ -103,7 +110,7 @@ const Home = () => {
             alt="Partner School"
           />
 
-          <div className="text-center font-bold text-greensage md:text-left">
+          <div className="text-center font-bold text-greensage mb-5 md:text-left">
             <h1 className="mb-3 text-2xl md:text-4xl">Partner Schools</h1>
 
             <Link

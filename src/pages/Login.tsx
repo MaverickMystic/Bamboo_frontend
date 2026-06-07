@@ -40,7 +40,7 @@ refreshUser();
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen mt-15 pt-13 flex items-center justify-center">
       <div className="bg-white -translate-y-30 rounded-2xl -mt-10 shadow-md p-10 w-full max-w-md">
 
         {/* Logo & Heading */}

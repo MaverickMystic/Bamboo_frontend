@@ -2,7 +2,7 @@ import { FaSearchLocation } from "react-icons/fa";
 
 const Map = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-15 pt-10" >
       <div className="flex flex-col justify-center items-center">
         <h1 className="flex flex-row font-bold text-xl text-greensage items-center mb-5"><FaSearchLocation className="mx-2" /> BAMBOO JAPANESE LANGUAGE SCHOOL</h1>
         <h1 className="text-center mb-10">Address: No(47)Thayaphi Street,Thapyaekonequarter,Zabthiri Township, Naypyidaw, Myanmar, 15011Phone: +95 9 44244 3388</h1>

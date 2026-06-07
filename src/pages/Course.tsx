@@ -3,7 +3,7 @@ import CourseCard from "../components/courseCard"
 const Course = () => {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center mt-15 justify-center">
         <h1 className="text-5xl mt-10 text-darkgreen font-bold">Annual Schedule</h1>
         <h1 className="mt-3 text-greensage">Currently, we offer five courses.</h1>
       </div>

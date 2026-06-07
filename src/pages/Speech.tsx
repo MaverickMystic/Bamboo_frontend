@@ -24,17 +24,17 @@ const Speech = () => {
   };
 
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mt-10 pb-16">
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-10 md:px-8 mt-15 pb-16">
       {/* 
         LAYOUT CONTROLLER:
         - Mobile/Tablet: Vertical flex stack.
         - Large Screens (lg:): Fixed split container. `lg:h-[520px]` caps the height 
           so the whole component fits onto the user's screen immediately.
       */}
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch w-full lg:h-[520px]">
+      <div className="flex flex-col lg:flex-row gap-6 md:gap-10 items-stretch w-full lg:h-[520px]">
         
         {/* GRAPHIC CARD BLOCK (LEFT COLUMN on Desktop) */}
-        <div className="w-full max-w-[340px] sm:max-w-[360px] lg:max-w-none lg:w-2/5 flex flex-col justify-between relative bg-gradient-to-t from-[#4EA65F]/20 via-[#D8EFD3]/40 to-white/10 rounded-3xl shadow-sm border border-gray-100 p-6 pt-10 min-h-[380px] lg:min-h-0 lg:h-full mx-auto lg:mx-0">
+        <div className="w-full max-w-[340px] sm:max-w-[360px] md:max-w-none lg:w-2/5 flex flex-col justify-between relative bg-gradient-to-t from-[#4EA65F]/20 via-[#D8EFD3]/40 to-white/10 rounded-3xl shadow-sm border border-gray-100 p-6 pt-10 min-h-[380px] lg:min-h-0 lg:h-full mx-auto lg:mx-0">
           
           {/* Status Ribbon Tag */}
           <div className="absolute top-4 left-4 bg-[#4EA65F] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm z-20">
@@ -42,7 +42,7 @@ const Speech = () => {
           </div>
 
           {/* Image Container */}
-          <div className="w-full flex justify-center items-end mt-auto h-56 sm:h-64 lg:h-[320px]">
+          <div className="w-full flex justify-center items-end mt-auto h-56 sm:h-64 md:h-[320px]">
             <img
               src={sensei}
               alt="Tin Zar Win"

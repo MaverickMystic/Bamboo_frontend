@@ -31,41 +31,45 @@ interface CardItemProps {
   post: Post;
 }
 
-const FALLBACK_IMAGE = "https://picsum.photos/400/200";
+const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&auto=format&fit=crop&q=60";
 
 const CardItem = ({ post }: CardItemProps) => {
   const imageSrc = post.previewImage || FALLBACK_IMAGE;
-  const previewText = post.previewText || "No preview available.";
 
   return (
-    <motion.div whileHover={{ scale: 1.03 }} className="w-full">
-      <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition hover:shadow-xl">
-        <img src={imageSrc} alt={post.title} className="h-64 w-full object-cover" />
+    <motion.div whileHover={{ scale: 1.02 }} className="w-full">
+      <div className="flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition hover:shadow-lg">
+        <img src={imageSrc} alt={post.title || "Blog post preview"} className="h-40 w-full object-cover" />
 
-        <div className="flex flex-1 flex-col justify-between p-6">
-          <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-semibold text-pink-500">
-                <TbCategory />
+        {/* Removed justify-between to fix the awkward empty middle gap */}
+        <div className="flex flex-1 flex-col p-4">
+          
+          {/* flex-grow ensures this upper zone establishes a stable baseline */}
+          <div className="flex-grow space-y-1.5">
+            <div className="flex items-center gap-1.5 text-xs">
+              <span className="text-pink-500">
+                <TbCategory size={14} />
               </span>
-              <span className="text-sm font-semibold text-gray-700">
+              <span className="font-semibold text-gray-500 uppercase tracking-wider">
                 {post.category || "General"}
               </span>
             </div>
 
-            <h3 className="-mt-2 text-lg font-bold text-gray-800">{post.title || "Untitled"}</h3>
-
-            <p className="line-clamp-3 text-sm text-gray-600">{previewText}</p>
+            {/* Changed line-clamp to 2 so longer titles wrap nicely without ruining the layout */}
+            <h3 className="text-base font-bold text-gray-800 line-clamp-2 leading-snug">
+              {post.title || "Untitled"}
+            </h3>
           </div>
 
-          <div className="mt-4">
-            <div className="mb-3 flex items-center gap-1 text-xs text-gray-500">
-              <Calendar size={14} />
+          {/* Fixed top margin creates a clean, uniform separation above the footer action bar */}
+          <div className="mt-5 pt-3 border-t border-gray-100 flex items-center justify-between">
+            <div className="flex items-center gap-1 text-[11px] text-gray-400">
+              <Calendar size={12} />
               {new Date(post.createdAt).toLocaleDateString()}
             </div>
 
             <Link to={`/blog/detail/${post._id}`}>
-              <button className="w-full cursor-pointer rounded-full border-2 border-greensage py-2 font-bold text-greensage transition hover:bg-greensage hover:text-white">
+              <button className="cursor-pointer rounded-full border border-greensage px-3 py-1 text-xs font-bold text-greensage transition hover:bg-greensage hover:text-white">
                 See more
               </button>
             </Link>
@@ -89,15 +93,7 @@ export default function Blog() {
   const [changingPage, setChangingPage] = useState(false);
   const [error, setError] = useState("");
 
-  // Example using Vite
-const baseURL = import.meta.env.VITE_API_BASE_URL;
-
-// Example using Create React App / Next.js
-// const baseURL = process.env.REACT_APP_API_BASE_URL || process.env.NEXT_PUBLIC_API_BASE_URL;
-
-fetch(`${baseURL}/api/users`)
-  .then(res => res.json())
-  .then(data => console.log(data));
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
 
   const fetchPosts = async (page: number, initial = false) => {
     try {
@@ -144,8 +140,8 @@ fetch(`${baseURL}/api/users`)
   }
 
   return (
-    <section className="px-4 py-12 sm:px-8">
-      <h2 className="mb-10 text-center text-3xl font-bold">Latest</h2>
+    <section className="px-4 mt-10 py-12 sm:px-8">
+      <h2 className="mb-8 text-center text-2xl font-bold">Latest</h2>
 
       {error ? (
         <div className="mx-auto mb-6 max-w-3xl rounded-xl border border-red-200 bg-red-50 p-4 text-red-700">
@@ -157,13 +153,13 @@ fetch(`${baseURL}/api/users`)
         <div className="py-20 text-center text-gray-500">No posts available.</div>
       ) : (
         <>
-          <div className="m-5 grid gap-6 p-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto max-w-7xl grid gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {posts.map((post) => (
               <CardItem key={post._id} post={post} />
             ))}
           </div>
 
-          <div className="mx-auto mt-6 flex max-w-4xl items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3">
+          <div className="mx-auto mt-8 flex max-w-7xl items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm">
             <p className="text-sm text-gray-600">
               Page <span className="font-medium">{pagination.page}</span> of{" "}
               <span className="font-medium">{pagination.totalPages}</span> (

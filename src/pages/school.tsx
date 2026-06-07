@@ -11,19 +11,9 @@ import ic from "../assets/ic.png";
 
 const School = () => {
   return (
-    <div className="mt-10 md:mt-10 pb-20">
-      {/* Optional Page Headline Anchor to look cleaner */}
-      <div className="text-center mb-8 md:mb-12 px-4">
-        <h1 className="text-3xl sm:text-4xl font-black text-[#4EA65F]">
-          Our Partner Schools
-        </h1>
-        <div className="w-16 h-1 bg-[#4EA65F] rounded mx-auto mt-3"></div>
-      </div>
-
-      {/* CARD RENDERING PIPELINE STACK */}
-      <div className="space-y-4 md:space-y-0">
-        <SchoolCard className="mt-10" link="https://samu-language.com/" name="SAMU Language school (サム教育学院)" location="2 Chome-1-6 Hyakunincho, Shinjuku City, Tokyo 169-0073, Japan" image={samu}/>
-        <SchoolCard className="flex-row-reverse mt-10" link="https://www.kudan-japanese-school.com/" name="Kudan Institute of Japanese Language and culture" location="Japan, 〒101-0061 Tokyo, Chiyoda City" image={kudan}/>
+    <div className="mt-10 max-w-7xl mx-auto px-4 pt-10 md:px-0">
+        <SchoolCard className="mt-10" link="https://samu-language.com/" name="SAMU Language school (サム教育学院) Uni" location=" 2 Chome-1-6 Hyakunincho, Shinjuku City, Tokyo 169-0073, Japan" image={samu}/>
+        <SchoolCard className="flex-row-reverse mt-10" link="https://www.kudan-japanese-school.com/" name="Kudan Institute of Japanese Language and culture Uni" location="Japan, 〒101-0061 Tokyo, Chiyoda City" image={kudan}/>
         <SchoolCard className="mt-10" link="https://www.saitama-briller-jls.jp/" name="Saitama Briller Japanese Language School" location="3 Chome-21-11 Irumagawa, Sayama, Saitama 350-1305, Japan" image={sai}/>
         <SchoolCard className="flex-row-reverse mt-10" link="https://jishugakkan.com/en/" name="Jishugakukan Japanese Language School" location="2-1-22 Mizue, Edogawa-ku, Tokyo 132-0011, Japan" image={JS}/>
         <SchoolCard className="mt-10" link="https://earth-planet.gonna.jp/" name="E-planet Japanese Language School" location="Osaka, 536-0003, Japan" image={eplanet}/>
@@ -31,7 +21,6 @@ const School = () => {
         <SchoolCard className="mt-10" link="https://nihongo.kaisei-group.co.jp/en/umeda.php" name="Kaisei academy japanese language school" location="6-18 Chayamachi, Kita Ward, Osaka, 530-0013, Japan" image={ks}/>
         <SchoolCard className="flex-row-reverse mt-10" link="https://share.google/kXZISsWFcMuNr2VTT" name="Abeno Japanese Langugage School" location="TSCAbeno, Building, 4F, 4 Chome-12-1 Hannancho, Abeno Ward, Osaka" image={ab}/>
         <SchoolCard className="mt-10" link="https://www.icn.gr.jp/" name="I.C.NAGOYA語学学校ー英語・諸外国語・日本語ー" location="Japan, 〒453-0014 Aichi, Nagoya" image={ic}/>
-      </div>
     </div>
   );
 };

@@ -34,7 +34,7 @@ const Nav = () => {
   return (
     <>
       {/* HEADER */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         {/* 
           1. h-18 reduces the height of the bar.
           2. max-w-5xl pulls logo and nav links closer toward the center screen axis.

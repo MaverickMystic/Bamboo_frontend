@@ -31,7 +31,7 @@ const timeline = [
 ];
 function About() {
   return (
-    <div className="relative w-full flex mt-20 justify-center">
+    <div className="relative w-full flex mt-15 justify-center">
       {/* vertical line */}
       <div className="absolute h-full border-l-2 border-gray-300 left-1/2 transform -translate-x-1/2"></div>
       <div className="space-y-12 py-10 w-full max-w-4xl">
