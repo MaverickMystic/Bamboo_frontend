@@ -14,8 +14,7 @@ const Footer = () => {
           <div className="">
             <h3 className="font-extrabold mb-2 text-bg">Address</h3>
             <h3>
-              Address: No(47)Thayaphi Street,Thapyaekonequarter,Zabthiri
-              Township, Naypyidaw, Myanmar, 15011
+            No(47),Thayaphi Street,Thapyaygone Quarter,Zabuthiri Twonship,Naypyitaw
             </h3>
             <h3>Phone: +95 9 44244 3388</h3>
           </div>
