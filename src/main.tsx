@@ -23,6 +23,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./components/AuthContext";
 import ErrorPage from "./pages/ErrorPage";
 import axios from "axios";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const router = createBrowserRouter([
   {
@@ -106,6 +107,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+      <SpeedInsights />
     </QueryClientProvider>
   </StrictMode>
 );

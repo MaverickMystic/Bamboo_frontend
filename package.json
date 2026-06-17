@@ -21,6 +21,7 @@
     "@tiptap/pm": "^3.22.5",
     "@tiptap/react": "^3.22.5",
     "@tiptap/starter-kit": "^3.22.5",
+    "@vercel/speed-insights": "^2.0.0",
     "axios": "^1.11.0",
     "framer-motion": "^12.38.0",
     "lucide": "^0.525.0",
