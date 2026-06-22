@@ -1,4 +1,3 @@
-import banner from "../assets/banner.jpg";
 
 const Banner = () => {
   return (
@@ -9,7 +8,7 @@ const Banner = () => {
         <div className="w-full max-w-[320px] md:max-w-none md:w-1/2 flex justify-center">
           <img
             className="w-full h-64 sm:h-80 md:h-[350px] lg:h-[400px] object-cover rounded-2xl shadow-sm"
-            src={banner}
+            src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146382/banner_phjzc7.jpg"}
             alt="School Banner"
           />
         </div>

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { NavLink, useLocation } from "react-router";
 import { TiThMenuOutline } from "react-icons/ti";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import bambooLogo from "../assets/bamboo.png";
+
 
 const Nav = () => {
   const [cartopen, iscartopen] = useState(false);
@@ -43,7 +43,7 @@ const Nav = () => {
           
           {/* LOGO */}
           <NavLink to="/" className="flex items-center">
-            <img className="w-28 md:w-32 object-contain" src={bambooLogo} alt="Bamboo Logo" />
+            <img className="w-28 md:w-32 object-contain" src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146384/bambooo_jvmz8h.png"} alt="Bamboo Logo" />
           </NavLink>
 
           {/* DESKTOP/TABLET NAV */}
