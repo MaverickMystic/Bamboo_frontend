@@ -43,7 +43,7 @@ const Nav = () => {
           
           {/* LOGO */}
           <NavLink to="/" className="flex items-center">
-            <img className="w-28 md:w-32 object-contain" src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146384/bambooo_jvmz8h.png"} alt="Bamboo Logo" />
+            <img className="w-28 md:w-32 object-contain" src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146382/bamboo_lzfnf2.png"} alt="Bamboo Logo" />
           </NavLink>
 
           {/* DESKTOP/TABLET NAV */}
