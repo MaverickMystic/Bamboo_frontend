@@ -140,7 +140,7 @@ export default function Blog() {
   }
 
   return (
-    <section className="px-4 mt-10 py-12 sm:px-8">
+    <section className="px-4 mt-10 py-12 sm:px-8 min-h-[600px] ">
       <h2 className="mb-8 text-center text-2xl font-bold">Latest</h2>
 
       {error ? (
@@ -150,7 +150,11 @@ export default function Blog() {
       ) : null}
 
       {posts.length === 0 ? (
-        <div className="py-20 text-center text-gray-500">No posts available.</div>
+      <div className="flex min-h-[400px] w-full flex-col items-center justify-center">
+    <div className="text-center font-medium text-gray-400">
+      No posts available.
+    </div>
+  </div>
       ) : (
         <>
           <div className="mx-auto max-w-7xl grid gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

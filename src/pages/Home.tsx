@@ -7,11 +7,7 @@ import MyCarousel from "../components/carousel";
 import Banner from "../components/banner";
 import Welcome from "../components/welcome";
 import ImageSlider from "../components/ImageSlider";
-import school from "../assets/school.jpg"
-import school1 from "../assets/bambooCard.png"
-import school2 from "../assets/bambooStu.jpg"
 import { Link } from "react-router";
-import partner from "../assets/partner.png";
 
 const Home = () => {
   const deviceType = (() => {
@@ -23,9 +19,9 @@ const Home = () => {
   })();
 
   const images = [
-    school1,
-    school,
-    school2
+    "https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146389/bambooCard_h0g1sx.png",
+    "https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146388/school_zhwdfs.jpg",
+    "https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146383/bambooStu_gh4h3g.jpg"
   ];
 
   return (
@@ -106,7 +102,7 @@ const Home = () => {
         <div className="flex flex-col items-center justify-center gap-6 md:flex-row-reverse">
           <img
             className="h-100 w-120 object-cover md:h-96 md:w-96"
-            src={partner}
+            src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146391/partner_qjzmzo.png"}
             alt="Partner School"
           />
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { UIEvent } from "react";
-import sensei from "../assets/sensei.png";
+
 
 const Speech = () => {
   // State tracking the active reading progress percentage (0 to 100)
@@ -44,7 +44,7 @@ const Speech = () => {
           {/* Image Container */}
           <div className="w-full flex justify-center items-end mt-auto h-56 sm:h-64 md:h-[320px]">
             <img
-              src={sensei}
+              src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146389/sensei_qht1cb.png"}
               alt="Tin Zar Win"
               className="w-auto h-full object-contain z-10 transition-transform duration-300 scale-110"
             />

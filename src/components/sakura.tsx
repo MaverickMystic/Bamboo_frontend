@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import sakura from "../assets/svg.png"
+
 
 const SakuraBackground = () => {
   const [petals, setPetals] = useState<number[]>([]);
@@ -13,7 +13,7 @@ const SakuraBackground = () => {
       {petals.map((i) => (
         <img
           key={i}
-          src={sakura}
+          src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146391/svg_tblyry.png"}
           className="absolute top-[-20px] h-6 w-6 animate-sakuraFall opacity-80"
           style={{
             left: `${Math.random() * 100}%`,
