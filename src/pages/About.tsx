@@ -2,31 +2,31 @@ const timeline = [
   {
     image:"https://bamboo-myanmar.com/wp-content/uploads/2023/06/IMG_5673.jpg",
     header: "December 2017: School Establishment",
-    text: "We established our school in Naypyidaw, the capital of Myanmar.Many Japanese language schools had been established in Yangon, the economic center of the country, but there were few Japanese language schools in the capital, Naypyidaw.",
+    text: "私たちは、ミャンマーの首都であるネピドーに学校を設立しました。経済の中心地であるヤンゴンには多くの日本語学校が設立されていましたが、首都のネピドーには日本語学校がほとんどありませんでした。",
   },
   {
     image:
       "https://bamboo-myanmar.com/wp-content/uploads/2023/06/IMG_5671.jpg",
     header: "September 2018: School building renovation and",
-    text: "establishment: Soon after, we received many inquiries from people who wanted to take classes.We started the Japanese language school with a small one-class classroom, but we received many inquiries from people who wanted to take classes. Since the small classroom at the beginning was not able to accommodate everyone, we immediately renovated the classroom and expanded the classroom area",
+    text: "設立後まもなく、受講を希望する方々から多くの問い合わせをいただくようになりました。当初は1クラスのみの小さな教室からスタートしたため、全員を収容することができず、すぐに教室を改装してスペースを拡張しました。",
   },
   {
     image:
       "https://bamboo-myanmar.com/wp-content/uploads/2023/06/IMG_9930.jpg",
     header: "November 2019: The school building",
-    text: "was renovated (for the second time) and the number of classrooms was increased.As a result, we were able to hold two classes at the same time instead of the original one. We also hired Japanese language teachers and staff, and established a system to become a Japanese language school that can meet more needs. We also held various events, such as Japanese cooking classes, where students could experience Japanese culture.",
+    text: "その後、二度目の改装を行い、教室の数を増やしました。その結果、当初の1クラスから、同時に2クラスの授業を開講できるようになりました。また、日本語教師やスタッフを採用し、より多くのニーズに応えられる体制を整えました。さらに、日本の料理教室など、生徒たちが日本文化を体験できる様々なイベントも開催しました。",
   },
   {
     image:
       "https://bamboo-myanmar.com/wp-content/uploads/2023/06/IMG_9926.jpg",
     header: "January 2023: Establishment of a recruitment agency ",
-    text: "We established a recruitment agency, Shwe Yin Mon, next to Bamboo Japanese Language School.In addition to wanting to study abroad in Japan, many of our students are studying Japanese with the goal of working in Japan. In order to fulfill the hopes of our students, we have obtained a license as a technical intern trainee sending organization approved by the Myanmar government.If you are a company considering hiring Myanmar people, please contact us.",
+    text: "私たちは、バンブー日本語学校の隣に人材紹介会社「シュエ・イン・モン（Shwe Yin Mon）」を設立しました。生徒たちの多くは、日本への留学だけでなく、日本で働くことを目標に日本語を勉強しています。こうした生徒たちの希望を叶えるため、私たちはミャンマー政府公認の技能実習生送り出し機関としてのライセンスを取得しました。ミャンマー人の採用をご検討中の企業様は、ぜひ当社までお問い合わせください。",
   },
   {
     image:
       "https://bamboo-myanmar.com/wp-content/uploads/2023/06/74d5d004bf00e8f80d6d9b4980257c60.jpg",
     header: "May 2023: New school building",
-    text: "established a recruitment constructed A new three-story school building was constructed, the number of classrooms was increased, and a variety of courses were established.Currently, our school offers five main courses (① Hiragana course, ② N5 course, ③ N4 course, ④ N3 course, ⑤ N2 course).The N2 course was first implemented in 2023, and students who have studied the N5, N4, and N3 courses at our school are continuing to study. Therefore, we are considering implementing the N1 course in the near future.Nay Pyi Taw is the administrative center and many government officials and people working in government agencies live and study Japanese at our school., Shwe Yin Mon, next to Bamboo Japanese Language School.In addition to wanting to study abroad in Japan, many of our students are studying Japanese with the goal of working in Japan. In order to fulfill the hopes of our students, we have obtained a license as a technical intern trainee sending organization approved by the Myanmar government.If you are a company considering hiring Myanmar people, please contact us.",
+    text: "新たに3階建ての校舎を建設し、教室数を増やすとともに、多様なコースを新設しました。現在、当校では主に5つのコース（①ひらがなコース、②N5コース、③N4コース、④N3コース、⑤N2コース）を提供しています。N2コースは2023年に初めて開講され、当校でN5、N4、N3コースを学んだ生徒たちが引き続き学習を続けています。そのため、近い将来にN1コースを開講することも検討しています。ネピドーは行政の中心地であり、多くの政府高官や政府機関で働く人々が暮らしており、当校で日本語を学んでいます。また、私たちはバンブー日本語学校の隣に、人材紹介会社「シュエ・イン・モン（Shwe Yin Mon）」を設立しました。生徒たちの多くは、日本への留学だけでなく、日本で働くことを目標に日本語を勉強しています。こうした生徒たちの希望を叶えるため、私たちはミャンマー政府公認の技能実習生送り出し機関としてのライセンスを取得しました。ミャンマー人の採用をご検討中の企業様は、ぜひ当社までお問い合わせください。",
   },
 ];
 function About() {
