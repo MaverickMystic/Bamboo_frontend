@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="">
             <h3 className="font-extrabold mb-2 text-bg">Address</h3>
             <h3>
-            No(47),Thayaphi Street,Thapyaygone Quarter,Zabuthiri Twonship,Naypyitaw
+            No(47),Thayaphi Street,Thapyaygone Quarter,Zabuthiri Township,Naypyitaw
             </h3>
             <h3>Phone: +95 9 44244 3388</h3>
           </div>
@@ -34,13 +34,13 @@ const Footer = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/courses">Courses</a>
+                <a href="/course">Courses</a>
               </li>
               <li>
-                <a href="/blogs">Blogs</a>
+                <a href="/blog">Blogs</a>
               </li>
               <li>
-                <a href="/about">About</a>
+                <a href="/about/schooloverview">About</a>
               </li>
             </ul>
           </div>

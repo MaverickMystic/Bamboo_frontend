@@ -66,18 +66,18 @@ const Home = () => {
     <div className="grid grid-cols-2 gap-4 w-full max-w-sm md:max-w-none md:grid-cols-3 md:gap-10">
       
       <Link to="/school">
-        <Card title="Partner Language School" icon={<GiShakingHands />} />
+        <Card title="提携語学学校" icon={<GiShakingHands />} />
       </Link>
 
       <Link to="/about/schooloverview">
-        <Card title="School Overview" icon={<FaSchool />} />
+        <Card title="学校概要" icon={<FaSchool />} />
       </Link>
 
       {/* 3. Added 'col-span-2 md:col-span-1' so this card spans full width 
            on mobile but behaves normally as a single unit on desktop layout breaks.
       */}
       <Link to="/course" className="col-span-2 md:col-span-1">
-        <Card title="Our Courses" icon={<BiBookBookmark />} />
+        <Card title="当校のコース" icon={<BiBookBookmark />} />
       </Link>
 
     </div>
@@ -107,13 +107,13 @@ const Home = () => {
           />
 
           <div className="text-center font-bold text-greensage mb-5 md:text-left">
-            <h1 className="mb-3 text-2xl md:text-4xl">Partner Schools</h1>
+            <h1 className="mb-3 text-2xl text-center md:text-4xl">提携校</h1>
 
             <Link
               to="/school"
               className="rounded-full border-2 border-greensage px-5 py-2 text-sm transition hover:bg-greensage hover:text-white md:text-lg"
             >
-              Click to See More
+              クリックして詳細をご覧ください
             </Link>
           </div>
         </div>
