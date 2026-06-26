@@ -69,11 +69,10 @@ const Inquiry = () => {
         {/* Header */}
         <div className="text-center mt-20 mb-12">
           <p className="text-xs sm:text-sm text-darkgreen tracking-widest font-semibold">
-            CONTACT US
+            お問い合わせ
           </p>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-greensage mt-2">
-            We’d love to talk to you
-          </h1>
+ぜひお話させてください          </h1>
         </div>
 
         {/* Contact Cards */}
@@ -117,10 +116,10 @@ const Inquiry = () => {
           {/* Left */}
           <div className="lg:col-span-2 text-center lg:text-left">
             <h2 className="text-xl md:text-2xl font-bold text-darkgreen mb-3">
-              Let’s Work Together
+              一緒に働きましょう
             </h2>
             <p className="text-greensage text-sm sm:text-base leading-relaxed">
-              Share your vision and we’ll respond quickly.
+              あなたのビジョンを共有してください。すぐに対応いたします。
             </p>
           </div>
 

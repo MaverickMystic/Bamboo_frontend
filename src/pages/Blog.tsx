@@ -136,7 +136,83 @@ export default function Blog() {
   };
 
   if (loading) {
-    return <div className="py-20 text-center text-gray-500">Loading posts...</div>;
+    return (
+  <section className="mt-10 min-h-[600px] px-4 py-12 sm:px-8">
+    <h2 className="mt-30 mb-8 text-center text-2xl font-bold">最新</h2>
+
+    {loading ? (
+      <div className="mx-auto max-w-7xl grid gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div
+            key={i}
+            className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm animate-pulse"
+          >
+            <div className="h-40 w-full bg-gray-200" />
+
+            <div className="p-4">
+              <div className="mb-3 h-3 w-20 rounded bg-gray-200" />
+              <div className="mb-2 h-5 w-full rounded bg-gray-200" />
+              <div className="mb-6 h-5 w-3/4 rounded bg-gray-200" />
+
+              <div className="flex items-center justify-between border-t border-gray-100 pt-3">
+                <div className="h-3 w-24 rounded bg-gray-200" />
+                <div className="h-7 w-20 rounded-full bg-gray-200" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : error ? (
+      <div className="mx-auto mb-6 max-w-3xl rounded-xl border border-red-200 bg-red-50 p-4 text-red-700">
+        {error}
+      </div>
+    ) : posts.length === 0 ? (
+      <div className="flex min-h-[450px] items-center justify-center">
+        <div className="text-center font-medium text-gray-400">
+         投稿がありません
+        </div>
+      </div>
+    ) : (
+      <>
+        <div className="mx-auto max-w-7xl grid gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {posts.map((post) => (
+            <CardItem key={post._id} post={post} />
+          ))}
+        </div>
+
+        <div className="mx-auto mt-8 flex max-w-7xl items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm">
+          <p className="text-sm text-gray-600">
+            Page <span className="font-medium">{pagination.page}</span> of{" "}
+            <span className="font-medium">{pagination.totalPages}</span> (
+            {pagination.total} posts)
+          </p>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={goPrev}
+              disabled={pagination.page <= 1 || changingPage}
+              className="inline-flex items-center gap-1 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-sm text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              <ChevronLeft size={16} />
+              Prev
+            </button>
+
+            <button
+              onClick={goNext}
+              disabled={
+                pagination.page >= pagination.totalPages || changingPage
+              }
+              className="inline-flex items-center gap-1 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-sm text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Next
+              <ChevronRight size={16} />
+            </button>
+          </div>
+        </div>
+      </>
+    )}
+  </section>
+);
   }
 
   return (
@@ -152,7 +228,7 @@ export default function Blog() {
       {posts.length === 0 ? (
       <div className="flex min-h-[400px] w-full flex-col items-center justify-center">
     <div className="text-center font-medium text-gray-400">
-      No posts available.
+     投稿がありません
     </div>
   </div>
       ) : (

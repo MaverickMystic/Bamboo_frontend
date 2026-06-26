@@ -112,6 +112,10 @@ const Nav = () => {
             <NavLink to="/map" className={pill}>
               Map
             </NavLink>
+
+            <NavLink to="/about/inquiry" className={pill}>
+              Inquiry
+            </NavLink>
           </nav>
 
           {/* MOBILE MENU BUTTON */}

@@ -7,7 +7,7 @@ const Footer = () => {
     <div>
       <div className="bg-darkgreen w-full ">
         <div className="w-11/12 m-7 p-7">
-          <h3 className="text-white">Please feel free to contact us.</h3>
+          <h3 className="text-white">お気軽にお問い合わせください。</h3>
           <hr className="text-bg mt-4" />
         </div>
         <div className="max-w-6xl grid grid-cols-1 text-center text-white md:grid-cols-3 mx-auto">
