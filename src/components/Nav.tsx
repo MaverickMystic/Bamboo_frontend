@@ -34,7 +34,7 @@ const Nav = () => {
   return (
     <>
       {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+     
         {/* 
           1. h-18 reduces the height of the bar.
           2. max-w-5xl pulls logo and nav links closer toward the center screen axis.
@@ -53,15 +53,15 @@ const Nav = () => {
             </NavLink>
 
             <NavLink to="/blog" className={pill}>
-              Blog
+              Blogs
             </NavLink>
 
             <NavLink to="/course" className={pill}>
-              Course
+              Courses
             </NavLink>
 
             <NavLink to="/school" className={pill}>
-              Partner School
+              Partner Schools
             </NavLink>
 
             {/* ABOUT DROPDOWN */}
@@ -122,7 +122,7 @@ const Nav = () => {
             <TiThMenuOutline />
           </button>
         </div>
-      </header>
+  
 
       {/* OVERLAY */}
       {cartopen && (

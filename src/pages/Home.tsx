@@ -19,7 +19,7 @@ const Home = () => {
   })();
 
   const images = [
-    "https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146389/bambooCard_h0g1sx.png",
+    "https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782547799/bambooCard1_ibljig.png",
     "https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146388/school_zhwdfs.jpg",
     "https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146383/bambooStu_gh4h3g.jpg"
   ];
