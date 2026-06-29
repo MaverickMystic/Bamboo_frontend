@@ -40,38 +40,40 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 // Example using Create React App / Next.js
 // const baseURL = process.env.REACT_APP_API_BASE_URL || process.env.NEXT_PUBLIC_API_BASE_URL;
 
-fetch(`${baseURL}/api/users`)
-  .then(res => res.json())
-  .then(data => console.log(data));
-
 const MenuBar = ({ editor }: MenuBarProps) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   if (!editor) return null;
 
-  const addImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files) return;
+const addImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const files = e.target.files;
+  if (!files) return;
 
-    try {
-      for (const file of Array.from(files)) {
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("upload_preset", "bamboo");
+  try {
+    for (const file of Array.from(files)) {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", "bamboo");
 
-        const res = await axios.post(
-          "https://api.cloudinary.com/v1_1/dqbhf8bu0/image/upload",
-          formData
-        );
+      console.log("📤 Uploading:", file.name, "Size:", file.size);
+      
+      const res = await axios.post(
+        "https://api.cloudinary.com/v1_1/dqbhf8bu0/image/upload",
+        formData
+      );
 
-        const imageUrl = res.data.secure_url;
-        editor.chain().focus().setImage({ src: imageUrl }).run();
-      }
-    } catch (error) {
-      console.error(error);
+      console.log("✅ Success:", res.data.secure_url);
+      editor.chain().focus().setImage({ src: res.data.secure_url }).run();
     }
+  } catch (error: any) {
+    console.error(" Error details:", {
+      status: error.response?.status,
+      message: error.response?.data?.error?.message || error.message,
+      file: error.config?.data
+    });
+  }
 
-    e.target.value = "";
-  };
+  e.target.value = "";
+};
 
   const addVideo = () => {
     const url = window.prompt("YouTube URL");
