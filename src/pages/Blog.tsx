@@ -216,8 +216,8 @@ export default function Blog() {
   }
 
   return (
-    <section className="px-4 mt-10 py-12 sm:px-8 min-h-[600px] ">
-      <h2 className="mb-8 mt-30 text-center text-2xl font-bold">最新</h2>
+    <section className="px-4 mt-5 py-12 sm:px-8 min-h-[600px] ">
+      <h2 className="mb-8  text-center text-2xl font-bold">最新</h2>
 
       {error ? (
         <div className="mx-auto mb-6 max-w-3xl rounded-xl border border-red-200 bg-red-50 p-4 text-red-700">
