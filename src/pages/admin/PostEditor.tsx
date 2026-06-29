@@ -54,11 +54,14 @@ const addImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
       formData.append("file", file);
       formData.append("upload_preset", "bamboo");
 
-      console.log("📤 Uploading:", file.name, "Size:", file.size);
+      console.log(" Uploading:", file.name, "Size:", file.size);
       
       const res = await axios.post(
         "https://api.cloudinary.com/v1_1/dqbhf8bu0/image/upload",
-        formData
+        formData,
+                {
+          withCredentials: false  // ← Add this line
+        }
       );
 
       console.log("✅ Success:", res.data.secure_url);
