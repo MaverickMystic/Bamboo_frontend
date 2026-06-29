@@ -54,24 +54,25 @@ const addImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
       formData.append("file", file);
       formData.append("upload_preset", "bamboo");
 
-      console.log(" Uploading:", file.name, "Size:", file.size);
+      console.log("Uploading:", file.name, "Size:", file.size);
       
-      const res = await axios.post(
+      // Create a FRESH axios instance without any global config
+      const cloudinaryAxios = axios.create({
+        withCredentials: false  // Explicitly disable
+      });
+
+      const res = await cloudinaryAxios.post(
         "https://api.cloudinary.com/v1_1/dqbhf8bu0/image/upload",
-        formData,
-                {
-          withCredentials: false  // ← Add this line
-        }
+        formData
       );
 
-      console.log("✅ Success:", res.data.secure_url);
+      console.log(" Success:", res.data.secure_url);
       editor.chain().focus().setImage({ src: res.data.secure_url }).run();
     }
   } catch (error: any) {
     console.error(" Error details:", {
       status: error.response?.status,
       message: error.response?.data?.error?.message || error.message,
-      file: error.config?.data
     });
   }
 
