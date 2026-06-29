@@ -47,9 +47,9 @@ const SchoolCard = ({
   const isReversed = className.includes("flex-row-reverse");
 
   return (
-    <div className="w-full flex justify-center px-4 md:px-8 py-10 md:py-14 overflow-hidden">
+    <div className="w-full flex justify-center px-3 md:px-8 py-10 md:py-14 overflow-hidden">
       <div
-        className={`w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center
+        className={`w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-10 items-center
         ${isReversed ? "md:[&>*:first-child]:order-2" : ""}`}
       >
         {/* IMAGE SECTION */}

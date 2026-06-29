@@ -3,7 +3,7 @@ import SchoolCard from "../components/schoolCard";
 
 const School = () => {
   return (
-    <div className="mt-10 max-w-7xl mx-auto px-4 pt-10 md:px-0">
+    <div className="  max-w-8xl   md:pt-10 md:px-0">
         <SchoolCard className="mt-10" link="https://samu-language.com/" name="SAMU Language school (サム教育学院) Uni" location=" 2 Chome-1-6 Hyakunincho, Shinjuku City, Tokyo 169-0073, Japan" image={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146390/SMAU_cxbjpk.png"}/>
         <SchoolCard className="flex-row-reverse mt-10" link="https://www.kudan-japanese-school.com/" name="Kudan Institute of Japanese Language and culture Uni" location="Japan, 〒101-0061 Tokyo, Chiyoda City" image={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146384/Kudan_rgfqju.jpg"}/>
         <SchoolCard className="mt-10" link="https://www.saitama-briller-jls.jp/" name="Saitama Briller Japanese Language School" location="3 Chome-21-11 Irumagawa, Sayama, Saitama 350-1305, Japan" image={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146386/sai_dhfn7m.jpg"}/>

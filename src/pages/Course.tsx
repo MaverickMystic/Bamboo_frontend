@@ -2,8 +2,8 @@ import CourseCard from "../components/courseCard"
 
 const Course = () => {
   return (
-    <div>
-      <div className="flex flex-col items-center mt-15 justify-center">
+    <div className="w-full px-4">
+      <div className="flex flex-col items-center md:mt-15 justify-center">
         <h1 className="text-5xl mt-10 text-darkgreen font-bold">年間スケジュール</h1>
         <h1 className="mt-3 text-greensage">現在、5つのコースを提供しています。.</h1>
       </div>

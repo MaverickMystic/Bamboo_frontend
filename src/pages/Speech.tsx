@@ -19,8 +19,8 @@ const Speech = () => {
   };
 
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-10 md:px-8 mt-15 pb-16">
-      <div className="flex mt-30 flex-col lg:flex-row gap-6 md:gap-10 items-stretch w-full lg:h-[520px]">
+    <div className="mx-auto max-w-6xl px-4 sm:px-6  md:px-8 md:mt-10  pb-16">
+      <div className="flex  flex-col lg:flex-row gap-6 md:gap-10 items-stretch w-full lg:h-[520px]">
         
         <div className="w-full max-w-[340px] sm:max-w-[360px] md:max-w-none lg:w-2/5 flex flex-col justify-between relative bg-gradient-to-t from-[#4EA65F]/20 via-[#D8EFD3]/40 to-white/10 rounded-3xl shadow-sm border border-gray-100 p-6 pt-10 min-h-[380px] lg:min-h-0 lg:h-full mx-auto lg:mx-0">
           

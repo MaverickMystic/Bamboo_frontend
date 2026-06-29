@@ -58,7 +58,7 @@ const dotVariant: Variants = {
 
 function About() {
   return (
-    <div className="relative w-full flex mt-15 justify-center overflow-hidden">
+    <div className="relative w-full flex md:mt-5 justify-center overflow-hidden">
       {/* vertical line */}
       <div className="absolute h-full border-l-2 border-gray-300 left-1/2 transform -translate-x-1/2"></div>
       <div className="space-y-12 py-10 w-full max-w-4xl">
@@ -74,7 +74,7 @@ function About() {
             >
               {/* image card */}
               <motion.div 
-                className="w-1/2 p-4"
+                className="w-1/2 py-4 px-3"
                 custom={isEven}
                 initial="hidden"
                 whileInView="visible"
@@ -103,7 +103,7 @@ function About() {
 
               {/* optional content */}
               <motion.div 
-                className={`w-[45%] min-w-0 p-4 bg-red flex items-end text-sm text-gray-700`}
+                className={`w-[45%] min-w-0 py-4 px-2 bg-red flex items-end text-sm text-gray-700`}
                 custom={!isEven}
                 initial="hidden"
                 whileInView="visible"

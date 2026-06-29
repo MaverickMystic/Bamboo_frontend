@@ -33,17 +33,12 @@ const Nav = () => {
 
   return (
     <>
-      {/* HEADER */}
-     
-        {/* 
-          1. h-18 reduces the height of the bar.
-          2. max-w-5xl pulls logo and nav links closer toward the center screen axis.
-        */}
-        <div className="mx-auto flex h-18 max-w-5xl items-center justify-between px-6">
+    
+        <div className="mx-auto flex items-center justify-between px-6 py-3 h-15 md:h-18 md:py-0 max-w-5xl">
           
           {/* LOGO */}
           <NavLink to="/" className="flex items-center">
-            <img className="w-28 md:w-32 object-contain" src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146382/bamboo_lzfnf2.png"} alt="Bamboo Logo" />
+            <img className="w-25 md:w-32 object-contain" src={"https://res.cloudinary.com/dqbhf8bu0/image/upload/v1782146382/bamboo_lzfnf2.png"} alt="Bamboo Logo" />
           </NavLink>
 
           {/* DESKTOP/TABLET NAV */}
@@ -120,7 +115,7 @@ const Nav = () => {
 
           {/* MOBILE MENU BUTTON */}
           <button
-            className="text-2xl text-greensage md:hidden p-1 hover:bg-gray-50 rounded-lg transition-colors"
+            className="text-2xl text-greensage bg-white md:hidden p-1 hover:bg-gray-50 rounded-lg transition-colors"
             onClick={() => iscartopen(true)}
           >
             <TiThMenuOutline />
@@ -138,7 +133,7 @@ const Nav = () => {
 
       {/* MOBILE DRAWER */}
       <div
-        className={`fixed right-0 top-0 z-50 h-full w-72 bg-white shadow-2xl transition-transform duration-300 ${
+        className={`fixed right-0 top-0 z-50 h-screen w-72 bg-white shadow-2xl transition-transform duration-300 ${
           cartopen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -156,15 +151,15 @@ const Nav = () => {
           </NavLink>
 
           <NavLink to="/blog" className={pill} onClick={() => iscartopen(false)}>
-            Blog
+            Blogs
           </NavLink>
 
           <NavLink to="/course" className={pill} onClick={() => iscartopen(false)}>
-            Course
+            Courses
           </NavLink>
 
           <NavLink to="/school" className={pill} onClick={() => iscartopen(false)}>
-            Partner School
+            Partner Schools
           </NavLink>
 
           <NavLink

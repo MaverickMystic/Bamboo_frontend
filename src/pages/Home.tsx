@@ -51,7 +51,7 @@ const Home = () => {
     <div className="w-full overflow-hidden">
       
       {/* HERO SECTION CONTAINER */}
-      <div className="relative mt-30 flex flex-col items-center">
+      <div className="relative  md:mt-30 flex flex-col items-center">
         
         {/* HERO TEXT - Animates immediately on load */}
         <motion.div 

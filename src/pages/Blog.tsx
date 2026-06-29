@@ -137,9 +137,9 @@ export default function Blog() {
 
   if (loading) {
     return (
-  <section className="mt-10 min-h-[600px] px-4 py-12 sm:px-8">
-    <h2 className="mt-30 mb-8 text-center text-2xl font-bold">最新</h2>
 
+<section className="px-4 py-8 sm:px-8  md:min-h-[600px]">
+  <h2 className="mb-8   text-2xl font-bold">最新</h2>
     {loading ? (
       <div className="mx-auto max-w-7xl grid gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {Array.from({ length: 8 }).map((_, i) => (

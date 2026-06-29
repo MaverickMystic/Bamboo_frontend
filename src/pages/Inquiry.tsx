@@ -64,10 +64,10 @@ const Inquiry = () => {
 
   return (
     <div className="bg-bg w-full flex justify-center">
-      <div className="w-full max-w-6xl flex flex-col items-center py-16 px-4 sm:px-8 lg:px-12">
+      <div className="w-full max-w-6xl flex flex-col items-center md:py-8  px-8 md:px-12">
 
         {/* Header */}
-        <div className="text-center mt-20 mb-12">
+        <div className="text-center mt-10 mb-12">
           <p className="text-xs sm:text-sm text-darkgreen tracking-widest font-semibold">
             お問い合わせ
           </p>

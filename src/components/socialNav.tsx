@@ -50,7 +50,7 @@ const SocialNav = () => {
             </span>
             
             {/* Descriptive Content Layout */}
-            <div className="flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-1">
               <span className="text-gray-900 font-bold">{link.label}:</span>
               <span className="text-gray-600 font-medium text-[11px] opacity-90 transition-opacity">
                 {link.displayUrl}

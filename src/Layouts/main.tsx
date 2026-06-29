@@ -7,17 +7,20 @@ import SocialNav from "../components/socialNav"
 const Main = () => {
   return (
     <div className="relative bg-bg min-h-screen">
-     
-      {/* <SakuraBackground /> */}
-   
+      {/* Fixed header with auto height to accommodate content */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-    <SocialNav /> 
+        <SocialNav /> 
         <Nav />
-        
       </header>
 
-      {/* 3. Main layout presentation view window */}
-      <div className="relative z-10 pt-[50px]">
+      {/* 
+        Content container with dynamic spacing.
+        The padding-top accommodates:
+        - SocialNav (~40px for small avatar + padding)
+        - Nav (~60px on mobile with py-3, ~72px on desktop with h-18)
+        Total: ~100px on mobile, ~112px on desktop (adjust as needed for your actual component heights)
+      */}
+      <div className="relative z-10 pt-[120px] md:pt-[100px]">
         <Outlet />
         <Footer />
       </div>
